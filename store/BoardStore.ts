@@ -9,5 +9,5 @@ const useBoardStore = create((set) => ({
 	board: null,
 	getBoard: () => {
 
-	})
+	}
 }))
