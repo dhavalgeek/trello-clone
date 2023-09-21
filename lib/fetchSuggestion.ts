@@ -1,6 +1,6 @@
 import formatTodosForAI from "./formatTodosForAI";
 
-const fetchSuggestion = async (board) => {
+const fetchSuggestion = async (board: Board) => {
     const todos = formatTodosForAI(board);
     console.log('Fomrmatted todos to send -- ', todos)
 
@@ -12,8 +12,11 @@ const fetchSuggestion = async (board) => {
         body: JSON.stringify({ todos })
     });
 
-    const GPTdata = await res.json();
-    const { content } = GPTdata;
+    // const GPTdata = await res.json();
+    // const { content } = GPTdata;
+    const content = 'GPT is summarising your tasks for the day...';
+
+    return content;
 };
 
 export default fetchSuggestion;

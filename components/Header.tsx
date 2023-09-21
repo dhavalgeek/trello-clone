@@ -10,7 +10,7 @@ import fetchSuggestion from "@/lib/fetchSuggestion";
 function Header() {
 	const [board, searchString, setSearchString] = useBoardStore(state => [state.board, state.searchString, state.setSearchString]);
 	const [loading, setLoading] = useState<boolean>(false);
-	const [suggestion, setSuggestion] = useState<boolean>(false);
+	const [suggestion, setSuggestion] = useState<string>('');
 
 	useEffect(() => {
 		if (board.columns.size === 0) return;
