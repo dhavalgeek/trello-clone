@@ -35,11 +35,14 @@ export async function POST(request: Request) {
 		stream: false,
 		messages: [
 			{
-				role: 'system',
+				role: "system",
 				content: `When responding, welcome the use always as Mr.Dhaval and say welcome to the Todo App! Limit the response to 200 characters`
-			}, {
-				role: 'user',
-				content: `Hi there, provide a summar of the following todos. Count how many todos are in each category such as To do, in  progress and done, then tell the user to have a productive day! Here's the data: ${JSON.stringify(todos)}`
+			},
+			{
+				role: "user",
+				content: `Hi there, provide a summar of the following todos. Count how many todos are in each category such as To do, in  progress and done, then tell the user to have a productive day! Here's the data: ${JSON.stringify(
+					todos
+				)}`
 			}
 		]
 	});
